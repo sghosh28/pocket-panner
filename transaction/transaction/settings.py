@@ -108,16 +108,7 @@ WSGI_APPLICATION = 'transaction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'tenant_schemas.postgresql_backend',
-        'NAME': 'pocketplan',
-        'USER': 'pocketplanner_db',
-        'PASSWORD': 'Ak2Wl0NS1wZrT8LIAB1l',
-        'HOST': 'database-1.cihyvkpqirz7.us-east-1.rds.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+
 
 DATABASE_ROUTERS = (
     'tenant_schemas.routers.TenantSyncRouter',
