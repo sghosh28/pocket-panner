@@ -20,15 +20,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
 
-@method_decorator(login_required(login_url='login'), name='dispatch')
-class TransacListView(ExportMixin, SingleTableMixin, FilterView):
-    table_class = TransacTable
-    model = Transac
-    template_name = 'ledger/ledger.html'
-    filter_class = TransacFilter
-    paginator_class = LazyPaginator
-    table2 = WalletTable(Wallet.objects.all())
-    extra_context = {'table2': table2}
+
 
 # Create your views here.
 
